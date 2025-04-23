@@ -33,3 +33,8 @@
       src: /tmp/frontend.zip
       dest: /usr/share/nginx/html
       remote_src: yes
+
+  - name: copy expense config
+    ansible.builtin.copy:
+      src: xpense.conf
+      dest: /etc/nginx/default.d/xpense.conf
