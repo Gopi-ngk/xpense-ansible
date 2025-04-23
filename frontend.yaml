@@ -38,3 +38,8 @@
     ansible.builtin.copy:
       src: xpense.conf
       dest: /etc/nginx/default.d/xpense.conf
+
+  - name: restart nginx
+    ansible.builtin.service:
+      state: restarted
+      name: nginx
