@@ -27,7 +27,7 @@
       name: "{{ item.name }}"
       state: "{{ item.state }}"
     loop:
-    - { name: 'mysql-server', state: 'absent'}
+    - { name: 'mysql-server', state: 'present'}
     
   - name: start and enable mysql server
     ansible.builtin.service:
